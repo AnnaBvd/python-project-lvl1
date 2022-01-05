@@ -7,3 +7,5 @@
 [![asciicast](https://asciinema.org/a/459524.svg)](https://asciinema.org/a/459524)
 ### Calc game
 [![asciicast](https://asciinema.org/a/460037.svg)](https://asciinema.org/a/460037)
+### Greatest common divisor game
+[![asciicast](https://asciinema.org/a/460062.svg)](https://asciinema.org/a/460062)
