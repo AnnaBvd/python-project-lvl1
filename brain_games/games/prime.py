@@ -5,6 +5,7 @@ TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_info():
+    """Returns random question and expected answer for prime number game"""
     think_num = randint(2, 60)
     question = str(think_num)
     # initialize expected_answer for using it after the loop

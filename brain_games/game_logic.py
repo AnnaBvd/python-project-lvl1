@@ -3,6 +3,7 @@ from brain_games.cli import welcome_user
 
 
 def play_game(game):
+    """Prints all game steps, depending on game type"""
     name = welcome_user()
     print(game.TASK)
     i = 1

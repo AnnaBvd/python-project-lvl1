@@ -5,8 +5,10 @@ TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def get_info():
+    """Returns random question and expected answer for gcd game"""
     first_num = randint(10, 120)
     second_num = randint(10, 120)
+    # checking all dividers from lowest of two to 1
     if first_num > second_num:
         divider = second_num
     else:

@@ -1,10 +1,12 @@
 #!/usr/bin/env python
+"""Calculator game"""
 
 from brain_games.games import calc
 from brain_games.game_logic import play_game
 
 
 def main():
+    """Runs "brain-calc" (calculator) game"""
     play_game(calc)
 
 
