@@ -9,3 +9,5 @@
 [![asciicast](https://asciinema.org/a/460037.svg)](https://asciinema.org/a/460037)
 ### Greatest common divisor game
 [![asciicast](https://asciinema.org/a/460062.svg)](https://asciinema.org/a/460062)
+### Arithmetic progression game
+[![asciicast](https://asciinema.org/a/460453.svg)](https://asciinema.org/a/460453)
