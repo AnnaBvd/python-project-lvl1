@@ -2,12 +2,12 @@
 """Is-even game"""
 
 from brain_games.games import even
-from brain_games.game_logic import play_game
+from brain_games.engine import play
 
 
 def main():
     """Runs "brain-even" (is-even) game"""
-    play_game(even)
+    play(even)
 
 
 if __name__ == "__main__":

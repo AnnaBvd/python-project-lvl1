@@ -4,21 +4,22 @@ from random import randint
 TASK = 'What number is missing in the progression?'
 
 
-def get_info():
+def generate_round():
     """Returns random question and expected answer for progression game"""
-    progr_length = randint(5, 11)
-    progr_start = randint(2, 33)
-    step = randint(2, 7)
-    progr_list = [progr_start]
-    # start from 1 because we already have progr_start on index 0
-    i = 1
-    while i < progr_length:
-        progr_list.append(progr_list[i - 1] + step)
-        i += 1
-    # pick random index
-    hidden_position = randint(0, progr_length - 1)
-    expected_answer = str(progr_list[hidden_position])
+    first = randint(2, 33)
+    diff = randint(2, 7)
+    length = randint(5, 11)
+    progr_list = generate_progression(first, diff, length)
+    hidden_position = randint(0, length - 1)
+    expected_answer = progr_list[hidden_position]
     progr_list[hidden_position] = '..'
-    # convert modified list to a string
     question = ' '.join(str(i) for i in progr_list)
-    return question, expected_answer
+    return question, str(expected_answer)
+
+
+def generate_progression(first, diff, length):
+    """Generates arithmetic progression list"""
+    progr_list = [first]
+    for i in range(1, length):
+        progr_list.append(progr_list[i - 1] + diff)
+    return progr_list

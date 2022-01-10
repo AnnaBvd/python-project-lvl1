@@ -4,19 +4,16 @@ from random import randint
 TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def get_info():
+def generate_round():
     """Returns random question and expected answer for prime number game"""
-    think_num = randint(2, 60)
-    question = str(think_num)
-    # initialize expected_answer for using it after the loop
-    expected_answer = ''
-    divider = 2
-    # dividers from 2 till sqrt(think_num) are enough
-    while divider <= think_num ** (0.5):
-        if think_num % divider == 0:
-            expected_answer = 'no'
-            break
-        divider += 1
-    if expected_answer == '':
-        expected_answer = 'yes'
+    num = randint(2, 60)
+    question = str(num)
+    expected_answer = 'yes' if is_prime(num) else 'no'
     return question, expected_answer
+
+
+def is_prime(num):
+    for divisor in range(2, int(num ** 0.5) + 1):
+        if num % divisor == 0:
+            return False
+    return True

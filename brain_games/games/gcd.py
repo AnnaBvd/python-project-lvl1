@@ -4,19 +4,17 @@ from random import randint
 TASK = 'Find the greatest common divisor of given numbers.'
 
 
-def get_info():
+def generate_round():
     """Returns random question and expected answer for gcd game"""
-    first_num = randint(10, 120)
-    second_num = randint(10, 120)
-    # checking all dividers from lowest of two to 1
-    if first_num > second_num:
-        divider = second_num
-    else:
-        divider = first_num
-    while divider > 0:
-        if first_num % divider == 0 and second_num % divider == 0:
-            expected_answer = str(divider)
-            break
-        divider -= 1
-    question = '{} {}'.format(str(first_num), str(second_num))
-    return question, expected_answer
+    num1 = randint(10, 120)
+    num2 = randint(10, 120)
+    question = f'{num1} {num2}'
+    expected_answer = gcd(num1, num2)
+    return question, str(expected_answer)
+
+
+def gcd(num1, num2):
+    """Returns greatest common divisor for two numbers"""
+    for divisor in range(min(num1, num2), 0, -1):
+        if num1 % divisor == 0 and num2 % divisor == 0:
+            return divisor
